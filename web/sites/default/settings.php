@@ -894,3 +894,8 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_ZP7yzDSgG9YfkGBhgrAJ01Ht9J0IjeK65gttZL8kgHp0ez8yIpY8QgewuXgHM5Wawrjvrx5H8w/sync';
+
+$settings['trusted_host_patterns'] = [
+	'^riseup-asso\.fr$',
+	'ru$',
+];
