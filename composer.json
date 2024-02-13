@@ -22,7 +22,9 @@
         "drupal/ds": "^3.19",
         "drupal/field_group": "^3.4",
         "drupal/media_gallery": "^2.2",
-        "drupal/module_filter": "^4.1"
+        "drupal/module_filter": "^4.1",
+        "drupal/paragraphs": "^1.17",
+        "drupal/quick_node_clone": "^1.17"
     },
     "conflict": {
         "drupal/drupal": "*"
