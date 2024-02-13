@@ -883,8 +883,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # }
 $databases['default']['default'] = array (
   'database' => 'drupal',
-  'username' => 'root',
-  'password' => '',
+  'username' => 'drupal',
+  'password' => 'ha&2-x+EdU*)Y.*',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
