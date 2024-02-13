@@ -5,7 +5,7 @@
 
 # Installation du site
 - Importer la BDD MySQL dans le serveur
-- Mettre le dossier **ru** à la racine de www/vhost/le dossier qui tu peux lire avec ton serveur
+- Mettre le dossier **ru** à la racine de www ou vhost ou le dossier que tu peux lire avec ton serveur
 - Naviguer avec ton navigateur de navigation dans ://ru/web. Un installateur Drupal tout beau va s'ouvrir
 - Suivre toutes les consignes de Drupal bien sagement
 	- Essayer de choisir le site en Français. Si ça marche pas (probablement parce que le réseau local n'a pas accès à internet), c'est possible dans un second temps, laisser English
