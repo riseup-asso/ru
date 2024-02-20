@@ -12,3 +12,6 @@
 	- Profil : Standard
 	- Parametres BDD : la base s'appelle drupal, pour les identifiants vous pouvez laisser root et mot de passe vide mais idéalement créez un utilisateur qui a accès a la base avec un mot de passe
 	- "Drupal est déjà installé" C'est chouette, vous pouvez visiter le site et y contribuer à partir d'ici
+
+# Base de données
+Lucie 20/02 : https://we.tl/t-heG9w1hHYX
