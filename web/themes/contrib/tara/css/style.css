@@ -3,16 +3,17 @@
 :root {
   --color-primary: #211A2E;
   --footer-color: #936856;
-  --color-content-bottom: #5C4192;
+  --color-content-bottom: #2f1844;
+  --purple-light: #5C4192;
   --color-header: #211A2E;
-  --color-secondary: #5C4192;
-  --color-header_top: #5C4192;
+  --color-secondary: #2f1844;
+  --color-header_top: #2f1844;
   --color-primary-light: #936856;
   --bg-body: #211A2E;
   --text-color: #fff;
   --bold-color: #fff;
   --light: #fff;
-  --light-brown: #bbb0a1;
+  --light-brown: #debca1;
   --border: #dbdbd3;
   --shadow: 0 0 8px 1px #cccccc;
   --font-text: 'Alegreya';
@@ -440,7 +441,7 @@ textarea:focus {
   padding: 10px 20px;
   text-decoration: none;
   color: #fff;
-  background-color: #5C4192;
+  background-color: var(--purple-light);
   transition: background-color 0.3s, border-color 0.3s;
   text-align: center;
   cursor: pointer;
@@ -1472,7 +1473,7 @@ ul.social-icons a:hover {
   position: relative;
   visibility: hidden;
   width: 100%;
-  background-color:#5C4192;
+  background-color:var(--color-content-bottom);
   min-height: 1px;
   z-index: 12;
 }
@@ -2937,7 +2938,7 @@ form .description {
 .box-spectacle {
   position: relative;
   color: #fff;
-  background-color: #5C4192;
+  background-color: var(--color-secondary);
   transition: background-color 0.3s, border-color 0.3s;
   text-align: center;
   cursor: pointer;
