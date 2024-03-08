@@ -3323,6 +3323,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     transform: translateX(0);
     z-index: 10;
   }
+
   .menu-wrap {
     position: relative;
     width: 100%;
@@ -3383,7 +3384,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
       position: relative;
       top: 0;
       color: #ffffff;
-      background-color:var(--color-primary);
+      background-color: var(--color-primary);
     }
 
   .region-primary-menu .submenu {
@@ -3392,8 +3393,8 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     color: var(--color-primary);
     top: 100%;
     min-width: 200px;
-    padding: 0 0.5rem;
-    border-radius: 0 0 8px 8px;
+    padding: 0 0rem;
+    border-radius: 0 0 0 0;
     opacity: 0;
     visibility: hidden;
   }
@@ -3401,6 +3402,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     .region-primary-menu .submenu li {
       padding: 0;
       border-top: 0;
+      padding: 0 0.5rem;
       border-bottom: 1px solid var(--text-color);
     }
 
@@ -3420,9 +3422,22 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
     animation: slideUp 0.5s forwards;
   }
 
-  .region-primary-menu .submenu a:hover {
+  .region-primary-menu .submenu a:hover,
+  .region-primary-menu .submenu li:hover {
     color: #ffffff;
+    background-color: var(--color-secondary);
+    transform: translateX(0%);
   }
+    .region-primary-menu .submenu a:hover::after,
+    .region-primary-menu .submenu > span:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0px; /* Adjust this value to control the distance of the rectangle from the text */
+      width: 0%;
+      height: 0%; /* Adjust this value to control the thickness of the rectangle */
+      background-color: white; /* Adjust color as needed */
+    }
   /* third level menu */
   .region-primary-menu .submenu .submenu {
     left: 100%;
