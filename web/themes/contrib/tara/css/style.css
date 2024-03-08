@@ -1207,6 +1207,7 @@ ul.social-icons a:hover {
   overflow: hidden;
   cursor: pointer;
   margin-right: 6px;
+  background-color: var(--color-primary);
 }
 
 .mobile-menu span {
@@ -1239,7 +1240,7 @@ ul.social-icons a:hover {
   right: 2px;
   display: grid;
   place-content: center;
-  color: #ffffff;
+  color: #fff;
   font-size: 1rem;
   width: 34px;
   height: 34px;
@@ -1267,10 +1268,11 @@ ul.social-icons a:hover {
   transition: all 0.4s ease;
   padding-top: 30px;
   color: #ffffff;
+  background-color: var(--color-primary);
 }
 
 .active-menu .menu-wrap {
-  background-color: #ffffff;
+  background-color: var(--color-primary);
   transform: translateX(0);
   overflow-y: auto;
   overflow-x: hidden;
@@ -1486,7 +1488,7 @@ ul.social-icons a:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  border-top: 4px solid #ffffff;
+  border-top: 1px solid var(--footer-color);
   z-index: 0;
 }
 
@@ -3381,6 +3383,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
       position: relative;
       top: 0;
       color: #ffffff;
+      background-color:var(--color-primary);
     }
 
   .region-primary-menu .submenu {
@@ -3418,7 +3421,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   }
 
   .region-primary-menu .submenu a:hover {
-    color: var(--color-primary);
+    color: #ffffff;
   }
   /* third level menu */
   .region-primary-menu .submenu .submenu {
