@@ -21,10 +21,3 @@
        url('../fonts/roboto.ttf') format('truetype');
 }
 
-/* roboto-regular - latin */
-@font-face {
-  font-family: 'Alegreya Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Alegreya Sans Regular'), local('AlegreyaSans-Regular'), url('../fonts/alegreya-sans.woff2') format('woff2'), url('../fonts/alegreya-sans.woff') format('woff'), url('../fonts/alegreya-sans.ttf') format('truetype');
-}
