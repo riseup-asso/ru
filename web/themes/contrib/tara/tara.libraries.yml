@@ -27,6 +27,13 @@ alegreya:
     component:
       css/alegreya.css: {}
 
+# Abril FatFace
+abrilfatface:
+  version: initial
+  css:
+    components:
+      css/abrilfatface.css: {}
+
 # Google Fonts from local
 googlefontslocal:
   version: VERSION
