@@ -31,7 +31,7 @@ alegreya:
 abrilfatface:
   version: initial
   css:
-    components:
+    component:
       css/abrilfatface.css: {}
 
 # Google Fonts from local
@@ -84,7 +84,7 @@ script-header:
   dependencies:
     - core/jquery
 
-# Theme settings page 
+# Theme settings page
 theme-settings:
   version: VERSION
   css:
