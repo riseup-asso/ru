@@ -42,7 +42,6 @@
     {% if google_font == 'local' %}
     <link rel="preload" as="font" href="{{ base_path ~ directory }}/fonts/open-sans.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="{{ base_path ~ directory }}/fonts/roboto.woff2" type="font/woff2" crossorigin>
-	<link rel="preload" as="font" href="{{ base_path ~ directory }}/fonts/alegreya-sans.woff2" type="font/woff2" crossorigin>
     {% endif %}
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
@@ -70,7 +69,7 @@
     {% endif %}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 {% include '@tara/template-parts/settings.html.twig' %}
-{% if slider_show and is_front %}	
+{% if slider_show and is_front %}
 <script>
 jQuery(document).ready(function ($) {
 $('.home-slider').owlCarousel({

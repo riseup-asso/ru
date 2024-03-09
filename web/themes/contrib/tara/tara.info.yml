@@ -9,6 +9,8 @@ core_version_requirement: ^9 || ^10
 # Libraries
 libraries:
   - tara/global-styling # Library for all global css. These css will be loaded on every pages.
+  - tara/alegreya # font added by rise up
+  - tara/abrilfatface # font added by rise up
 regions:
   header_top: 'Header Top'
   site_branding: 'Site Branding'
