@@ -286,7 +286,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'FGDsssXM13MxXgp-p88imid51_dPp937o94BsvFh3rO42lPxYce3uVqR3yMRvnARE1K7cL0LWg';
+$settings['hash_salt'] = 'bXUy-MG8RQO9jB2LK43CkvfFlOJeQ4jTy89P6AAMAWBoP4T-1v6oxKeoIxdtui_mKJ4odTMFvQ';
 
 /**
  * Deployment identifier.
@@ -881,16 +881,20 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+$settings['config_sync_directory'] = 'sites/default/files/config_TyRKNjs_2TRLK-Vk2Cm8NlP_kLXEFZpBc3lZ5zgck9ZW0ds1l3_OZMWeF7-5-DbmY909EGKyhw/sync';
 $databases['default']['default'] = array (
   'database' => 'drupal',
-  'username' => 'root',
+  'username' => 'drupal',
   'password' => 'this docker compose file is not suitable for production',
   'prefix' => '',
   'host' => 'db',
-  'port' => '3306',
-  'isolation_level' => 'READ COMMITTED',
-  'driver' => 'mysql',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+  'port' => '5432',
+  'driver' => 'pgsql',
+  'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+  'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_TyRKNjs_2TRLK-Vk2Cm8NlP_kLXEFZpBc3lZ5zgck9ZW0ds1l3_OZMWeF7-5-DbmY909EGKyhw/sync';
+$settings['trusted_host_patterns'] = [
+  '^localhost$',
+  '127\.0\.0\.1',
+];
+

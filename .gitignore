@@ -8,7 +8,7 @@ web/sites/default/files/
 *.sql
 
 # dev docker compose
-mariadb
+postgresql
 sites/default/files/php
 sites/default/files/css
 sites/default/files/js
