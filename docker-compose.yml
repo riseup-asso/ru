@@ -1,0 +1,20 @@
+name: riseup
+
+services:
+
+  drupal:
+    image: drupal
+    ports:
+     - "8000:80"
+    volumes:
+     - "./sites:/opt/drupal/web/sites"
+     - "./web/themes/contrib/tara:/var/www/html/themes/tara"
+
+  db:
+    image: mariadb
+    environment:
+      "MARIADB_ROOT_PASSWORD": "this docker compose file is not suitable for production"
+      "MARIADB_DATABASE": "drupal"
+    volumes:
+      - "./mariadb:/var/lib/mysql"
+
