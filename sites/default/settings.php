@@ -897,4 +897,3 @@ $settings['trusted_host_patterns'] = [
   '^localhost$',
   '127\.0\.0\.1',
 ];
-

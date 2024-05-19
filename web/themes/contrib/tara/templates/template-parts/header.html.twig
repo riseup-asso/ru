@@ -1,6 +1,8 @@
 <!-- Start: Header -->
 <header id="header">
-
+  {% if page.header_top or all_icons_show %}
+    {% include '@tara/template-parts/header_top.html.twig' %}
+  {% endif %}
   <div class="header">
     <div class="container">
       <div class="header-container">
@@ -25,7 +27,20 @@
               </div>
             </div><!-- /primary-menu-wrapper -->
             {% endif %}<!-- end if for page.primary_menu -->
-            
+            {% if page.search_box %}
+              <div class="full-page-search">
+                <div class="search-icon">
+                  <i class="icon-search" aria-hidden="true"></i>
+                </div> <!--/.search icon -->
+                <div class="search-box">
+                  <div class="search-box-close"></div>
+                  <div class="search-box-content">
+                    {{ page.search_box }}
+                  </div>
+                  <div class="search-box-close"></div>
+                </div><!--/.search-box -->
+              </div> <!--/.full-page-search -->
+            {% endif %} <!-- end if for page.search_box -->
           </div> <!--/.header-right -->
         {% endif %}<!-- end if for page.search_box or  page.primary_menu -->
       </div> <!--/.header-container -->
