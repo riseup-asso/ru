@@ -28,25 +28,13 @@
 					{{ page.content_home }}
 				</div><!--/.homepage-content -->
 			{% endif %}
-     
+      {% include '@tara/template-parts/content_bottom.html.twig' %}
     </main>
     {% if front_sidebar %}
       {% include '@tara/template-parts/left_sidebar.html.twig' %}
       {% include '@tara/template-parts/right_sidebar.html.twig' %}
       </div> {# /.main-container #}
     {% endif %}
-  </div> <!--/.container -->
-</div><!-- /main-wrapper -->
-
-<div id="main-wrapper2" class="main-wrapper" style="background-color:var(--color-content-bottom);">
-  <div class="container" >
-    
-    <main id="front-main" class="homepage-content page-content" >
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      
-      {% include '@tara/template-parts/content_bottom.html.twig' %}
-    </main>
-    
   </div> <!--/.container -->
 </div><!-- /main-wrapper -->
 {% include '@tara/template-parts/footer.html.twig' %}

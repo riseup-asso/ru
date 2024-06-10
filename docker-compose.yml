@@ -8,7 +8,9 @@ services:
      - "8000:80"
     volumes:
      - "./sites:/opt/drupal/web/sites"
-     - "./web/themes/contrib/tara:/var/www/html/themes/tara"
+     - "./web/themes/contrib/tara:/var/www/html/themes/contrib/tara"
+     - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
+
 
   db:
     image: postgres:16

@@ -20,19 +20,11 @@ slider:
   dependencies:
     - core/jquery
 
-# Alegreya
-alegreya:
-  version: 2011
+# Google Fonts from CDN
+googlefontscdn:
   css:
-    component:
-      css/alegreya.css: {}
-
-# Abril FatFace
-abrilfatface:
-  version: initial
-  css:
-    component:
-      css/abrilfatface.css: {}
+    theme:
+      //fonts.googleapis.com/css?family=Open+Sans|Roboto: { type: external }
 
 # Google Fonts from local
 googlefontslocal:
@@ -84,7 +76,7 @@ script-header:
   dependencies:
     - core/jquery
 
-# Theme settings page
+# Theme settings page 
 theme-settings:
   version: VERSION
   css:

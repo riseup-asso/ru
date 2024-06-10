@@ -1,0 +1,905 @@
+/* this overrides: tara/css/style.css */
+
+/* Variables
+----------------------- */
+:root {
+  /* overridden variables */
+  --color-primary: #211A2E;
+  --color-secondary: #2f1844;
+  --color-primary-light: #936856;
+  --bg-body: #211A2E;
+  --text-color: #fff;
+  --bold-color: #fff;
+  --light: #fff;
+  --font-text: 'Alegreya';
+  --font-heading: "Abril Fatface";
+  /* new variables */
+  --footer-color: #936856;
+  --color-content-bottom: #2f1844;
+  --purple-light: #5C4192;
+  --color-header: #211A2E;
+  --color-header_top: #2f1844;
+  --light-brown: #debca1;
+}
+
+
+/* I don't understand what this does,
+ * but today is **not** gonna be the day that they're gonna throw it back to you //TODO */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  font-family: var(--font-heading);
+}
+
+/* HTML and Body
+----------------------- */
+
+body {
+  font-family: var(--font-text);
+}
+/* this used to be:
+  font-family: var(--font-text), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+My guess is that it's a good idea to keep fallback defaults,
+but I don't have time to test and break this, I'm just an honest refactorer.
+*/
+
+/* Typography -> Blockquote */
+blockquote:before {
+  top: 0;
+  left: 0;
+}
+
+blockquote > p:last-child {
+  margin-bottom: unset;
+}
+
+blockquote p:last-of-type {
+  margin: 0;
+}
+
+/* Forms
+----------------------- */
+
+form .description {
+  font-size: 0.9em;
+}
+
+.button-rec {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--purple-light);
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-rec:hover {
+  background-color: #936856;
+  color:#fff;
+}
+
+.button-rec2 {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--color-primary);
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-rec2:hover {
+  background-color: #936856;
+  color: #fff;
+}
+
+input[type=submit],
+input[type=button],
+button {
+  padding: unset;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset],
+button,
+.button {
+  display: inline-block;
+  padding: 8px 1rem;
+  border: 3px solid #ffffff;
+  border-radius: 2rem;
+  transition: all 0.4s ease-in-out;
+  line-height: 1.6;
+}
+
+input[type=submit]:hover {
+  background-color: unset;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+button:hover,
+.button:hover {
+  background-color: transparent;
+  border: 3px solid var(--bold-color);
+  color: var(--bold-color);
+}
+
+/* container and page layout
+-------------------------------------------- */
+
+/* content warpper including main, sidebar */
+
+.main-wrapper {
+  /* overridden */
+  padding: 1rem 0;
+  background: #211A2E;
+  /* new */
+  display: block;
+  color: #fff;
+}
+
+.main-container {
+  gap: 1rem;
+  padding: unset;
+}
+
+/* Header
+--------------------------------------*/
+/* Header container */
+#header,
+.header-top,
+.header {
+  z-index: 3;
+}
+
+/* Header top */
+.header-top {
+  background-color: var(--color-header_top);
+}
+
+/* header top left block region */
+.header-top ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* header for branding and main menu */
+.header {
+  background-color: var(--color-header);
+  color: #ffffff;
+}
+
+/* main menu */
+.mobile-menu {
+  background-color: var(--color-primary);
+}
+
+.menu-wrap {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.active-menu .menu-wrap {
+  background: unset;
+  background-color: var(--color-primary);
+}
+
+.region-primary-menu .menu {
+  color: unset;
+}
+
+.menu-item-has-children::after {
+  content: "";
+}
+
+/* search box */
+
+.search-box-content input[type=submit] {
+  padding: 10px 2rem;
+}
+
+.search-box-content input[type=submit]:hover {
+  box-shadow: unset;
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* Sidebar
+-------------------------------------------- */
+
+#sidebar-left {
+  padding: unset;
+}
+
+#sidebar-right {
+  padding: unset;
+}
+
+.sidebar .block-title {
+  line-height: unset;
+}
+
+/* Footer
+--------------------------------------*/
+
+#last-section {
+  background-color:var(--color-content-bottom);
+}
+
+#footer {
+  background: var(--footer-color);
+  border-top: 1px solid var(--footer-color);
+}
+
+.footer .block-title {
+  padding-left: 6px;
+  font-size: 1.3rem;
+}
+
+/* Footer -> Footer Bottom last*/
+/* Node Content
+--------------------------------------*/
+/* Admin Tabs */
+
+/* generalize a ul-specific style, to a class-wide style */
+ul.page-tabs {
+  list-style: unset;
+  display: unset;
+  flex-wrap: unset;
+  margin: unset;
+  padding: unset;
+  border-bottom: unset;
+}
+.page-tabs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border-bottom: 2px solid var(--border);
+}
+
+.page-tabs li {
+  background-color: var(--border);
+  border-right: 2px solid #ffffff;
+  text-shadow: 1px 1px #ffffff;
+  padding: 0; /* new */
+}
+
+.page-tabs li:last-child {
+  border-right: 0;
+}
+
+.page-tabs li a {
+  border-right: unset;
+  padding: 5px 10px; /* kept */
+  background: unset;
+  text-shadow: unset;
+  /* new attributes */
+  display: block;
+  color: var(--bold-color);
+  transition: all 0.3s ease;
+}
+
+/* generalize a ul/li/a hierarchy specific style, to a class-wide style; AND do some overrides */
+ul.page-tabs li.active-page-tab a {
+  background: unset;
+  color: unset;
+  text-shadow: unset;
+}
+
+.page-tabs .active-page-tab {
+  background: var(--color-primary); /* generalization */
+  color: unset; /* override */
+  text-shadow: none; /* generalization */
+}
+
+.page-tabs .active-page-tab a {
+  color: #ffffff; /* override */
+}
+
+/* same pattern here */
+ul.page-tabs li a:hover {
+  background: unset;
+  color: unset;
+  text-shadow: unset;
+}
+
+.page-tabs li:hover {
+  background: var(--color-secondary); /* generalization */
+  color: unset; /* override */
+  text-shadow: none; /* generalization */
+}
+
+.page-tabs li:hover a {
+  color: #ffffff; /* override */
+}
+
+/* node taxonomy and links */
+.taxonomy-terms {
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.taxonomy-terms li {
+  position: unset;
+  padding: unset;
+}
+
+.taxonomy-terms li::before {
+  content: unset;
+}
+
+li.taxonomy-term {
+  display: unset;
+}
+
+/* pager */
+nav.pager {
+  position: unset;
+}
+
+.pager {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.pager ul.pager__items {
+  position: unset;
+  margin: unset;
+  padding: unset;
+  list-style: unset;
+  list-style-type: unset;
+}
+
+.pager__items {
+  clear: unset;
+  text-align: unset;
+}
+
+.pager-items {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pager__item {
+  display: unset;
+}
+
+.pager-item {
+  display: grid;
+  place-content: center;
+  color: var(--bold-color);
+  height: 44px;
+  min-width: 44px;
+  border-radius: 4px;
+  border: 2px solid var(--bold-color);
+}
+
+.pager-item-control {
+  border-color: var(--color-primary);
+}
+
+.pager__item a {
+  padding: unset;
+  border: unset;
+  border-radius: unset;
+  /* new attributes */
+  background-color: transparent;
+  color: var(--bold-color);
+  padding: 0 2px;
+}
+
+.pager-item a {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  height: 40px;
+  min-width: 40px;
+}
+
+.pager__item a:hover,
+.pager__item.is-active a {
+  border-color: #ffffff;
+}
+
+.pager .is-active {
+  border-color: var(--color-primary);
+}
+
+/* Calendar
+-------------------------------------- */
+.view .pager {
+  margin: unset;
+}
+
+.view .pager ul {
+  list-style: unset;
+  margin: unset;
+  padding: unset;
+}
+
+.view-footer {
+  margin-top: 1rem;
+}
+
+/* Block Regions
+--------------------------*/
+.block-title {
+  line-height: 1.2;
+}
+
+/* Breadcrumb
+--------------------------*/
+#breadcrumb {
+  z-index: 2;
+}
+
+/* content top and content bottom block region */
+.region-content-top .block,
+.region-content-bottom .block {
+  background-color: unset;
+  box-shadow: unset;
+}
+
+/* Homepage
+-------------------------------------------- */
+.home-slider a.button {
+  padding: unset;
+  background: unset;
+  color: unset;
+  transition: unset;
+}
+
+.home-slider .owl-item a.button:hover,
+.home-slider a.button:hover {
+  background: unset;
+}
+
+.section,
+.homepage-content {
+  position: unset;
+  z-index: unset;
+}
+
+.last-section,
+.content-home {
+  position: relative;
+  z-index: 2;
+}
+
+.homepage-content .block {
+  margin-bottom: unset;
+}
+
+.content-home .block {
+  margin-bottom: 4rem;
+}
+
+/* only the selector changes. */
+.homepage-content h3.block-title {
+  margin-bottom: unset;
+  padding-bottom: unset;
+  font-size: unset;
+  font-weight: unset;
+  text-align: unset;
+}
+
+.content-home .block-title {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* only the selector changes. */
+.homepage-content h3.block-title::after {
+  position: unset;
+  content: unset;
+  bottom: unset;
+  left: unset;
+  width: unset;
+  height: unset;
+  margin-left: unset;
+  background: unset;
+}
+
+.content-home .block-title::after  {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  margin-left: -25px;
+  background: var(--color-primary);
+}
+
+/* Custom components
+-------------------------------------------- */
+/* services */
+.service {
+  padding: 2rem; /* override */
+  /* new attributes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service h3 {
+  margin: unset;
+  font-weight: unset;
+}
+
+.service a.button,
+.service a.button:visited {
+  padding: unset;
+  background: unset;
+  color: unset;
+  border-radius: unset;
+  transition: unset;
+}
+
+.service a.button:hover {
+  background: unset;
+}
+
+.service a.button::after {
+  content: unset;
+  padding-left: unset;
+  font-family: unset;
+}
+
+.service p:last-of-type {
+  margin: 0;
+}
+
+/* Scroll To Top
+------------------------- */
+.scrolltop {
+  background: var(--color-primary);
+}
+
+.scrolltop:hover {
+  background: var(--bold-color);
+}
+
+/* sections
+--------------------------------- */
+.section,
+.section-small,
+.section-large,
+.unit {
+  display: block;
+  width: 100%;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section-small {
+  padding: 1rem 0;
+}
+
+.section-large,
+.unit {
+  padding: 3rem 0;
+}
+
+/* Responsive Columns
+------------------------- */
+.unit {
+  position: unset;
+  display: unset;
+  width: unset;
+  padding: unset;
+}
+
+.flex,
+.grid,
+.items,
+.columns,
+.grid-container,
+.flex-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.flex,
+.flex-container,
+.columns {
+  display: flex;
+}
+
+.columns {
+  flex-wrap: wrap;
+  display: unset;
+  justify-content: unset;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+/* flex-items width */
+.w10,
+.w20,
+.w30,
+.w40,
+.w50,
+.w60,
+.w70,
+.w80,
+.w90 {
+  flex: 1 1 100%;
+}
+
+/* Column Alignment
+------------------------- */
+
+.gap {
+  gap: 1rem;
+}
+
+.gap-2x {
+  gap: 2rem;
+}
+
+.gap-small {
+  gap: 0.5rem;
+}
+
+.no-gap {
+  gap: 0;
+}
+
+/* Flex properties */
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+
+/* Box
+------------------------- */
+.box p:last-child {
+  margin: unset;
+}
+.box p:last-of-type {
+  margin: 0;
+}
+
+
+/* new */
+.box-spectacle {
+  position: relative;
+  color: #fff;
+  background-color: var(--color-secondary);
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+  padding: 10rem;
+  font-size: xx-large;
+  font: var(--font-heading);
+}
+.box-spectacle p:last-of-type {
+  margin: 0;
+}
+.box-spectacle:hover {
+  background-color: var(--light-brown);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.box-spectacle2 {
+  position: relative;
+  color: #fff;
+  background-color: #936856;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+  padding: 10rem;
+  font-size: xx-large;
+  font: var(--font-heading);
+}
+.box-spectacle2 p:last-of-type {
+  margin: 0;
+}
+.box-spectacle2:hover {
+  background-color: var(--light-brown);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Clearing
+-------------------------------------------- */
+
+/* remove selector highlighted::before */
+#highlighted::before,
+#last-section::before {
+  content: unset;
+  display: unset;
+  clear: unset;
+}
+#last-section::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* remove selector highlighted::after */
+#highlighted::after,
+#last-section::after {
+  content: unset;
+  display: unset;
+  clear: unset;
+}
+#last-section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* remove selectors #main-wrapper::before and #main-wrapper::after*/
+#main-wrapper::before,
+#homepage-content-wrapper::before,
+#main-wrapper::after,
+#homepage-content-wrapper::after {
+  content: unset;
+  display: unset;
+  clear: unset;
+}
+#homepage-content-wrapper::before,
+#homepage-content-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* remove selectors nav.pager::before and nav.pager::after */
+.node-header::before,
+.node-header::after,
+.node-taxonomy-container::before,
+.node-taxonomy-container::after,
+.node-links-container::before,
+.node-links-container::after,
+nav.pager::before,
+nav.pager::after {
+  content: unset;
+  display: unset;
+  clear: unset;
+}
+.node-header::before,
+.node-header::after,
+.node-taxonomy-container::before,
+.node-taxonomy-container::after,
+.node-links-container::before,
+.node-links-container::after,
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .region-primary-menu .menu-item-level-1:hover {
+    background-color: unset;
+    color: unset;
+  }
+  .region-primary-menu .menu-item-level-1:hover > a {
+    color: unset;
+  }
+  .region-primary-menu .menu-item-level-1 a,
+  .region-primary-menu .menu-item-level-1 > span {
+    /* override */
+    color:  #ffffff;
+    padding: 1rem;
+    /* new */
+    transition: transform 0.5s ease;
+  }
+  .region-primary-menu .menu-item-level-1 a:hover,
+  .region-primary-menu .menu-item-level-1 > span:hover {
+    background-color: unset;
+    color: unset;
+    /* new */
+    transform: translateX(-10%);
+  }
+
+  /* new */
+  .region-primary-menu .menu-item-level-1 a:hover::after,
+  .region-primary-menu .menu-item-level-1 > span:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to control the distance of the rectangle from the text */
+    width: 100%;
+    height: 20%; /* Adjust this value to control the thickness of the rectangle */
+    background-color: white; /* Adjust color as needed */
+  }
+
+  .menu-item-has-children::after {
+    color: #ffffff;
+    background-color: var(--color-primary);
+  }
+
+  .region-primary-menu .submenu {
+    background-color: #ffffff;
+    color: var(--color-primary);
+  }
+
+  .region-primary-menu .submenu {
+    padding: 0 0rem;
+    border-radius: 0 0 0 0;
+  }
+
+  .region-primary-menu .submenu li {
+    padding: 0 0.5rem;
+  }
+
+  .region-primary-menu .submenu a,
+  .region-primary-menu .submenu li > span {
+    background-color: #ffffff;
+    color: var(--color-primary);
+  }
+
+  .region-primary-menu .submenu a:hover {
+    color: unset;
+  }
+  .region-primary-menu .submenu a:hover,
+  .region-primary-menu .submenu li:hover
+  {
+    color: #ffffff;
+    background-color: var(--color-secondary);
+    transform: translateX(0%);
+  }
+
+  .region-primary-menu .submenu a:hover::after,
+  .region-primary-menu .submenu > span:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Adjust this value to control the distance of the rectangle from the text */
+    width: 0%;
+    height: 0%; /* Adjust this value to control the thickness of the rectangle */
+    background-color: white; /* Adjust color as needed */
+  }
+}

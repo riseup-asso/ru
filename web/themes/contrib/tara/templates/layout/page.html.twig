@@ -52,40 +52,18 @@
 {% include '@tara/template-parts/header.html.twig' %}
 {% include '@tara/template-parts/breadcrumb_region.html.twig' %}
 {% include '@tara/template-parts/highlighted.html.twig' %}
-{% if page.content_top %}
-<div id="main-wrapper" class="main-wrapper" style="background-color:var(--color-content-bottom);">
-  <div class="container">
- 
-      {% include '@tara/template-parts/content_top.html.twig' %}
-     
-
-  </div> {# /.container #}
-</div>{# /main-wrapper #}
-{% endif %}
-
 <div id="main-wrapper" class="main-wrapper">
   <div class="container">
   <div class="main-container">
     <main id="main" class="page-content">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      
+      {% include '@tara/template-parts/content_top.html.twig' %}
       {{ page.content }}
-     
+      {% include '@tara/template-parts/content_bottom.html.twig' %}
     </main>
     {% include '@tara/template-parts/left_sidebar.html.twig' %}
     {% include '@tara/template-parts/right_sidebar.html.twig' %}
   </div> {# /.main-container #}
   </div> {# /.container #}
 </div>{# /main-wrapper #}
-{% if page.content_bottom %}
-<div id="main-wrapper" class="main-wrapper" style="background-color:var(--color-content-bottom);">
-  <div class="container">
-
-      
-      {% include '@tara/template-parts/content_bottom.html.twig' %}
-
-  </div> {# /.container #}
-</div>{# /main-wrapper #}
-{% endif %}
-
 {% include '@tara/template-parts/footer.html.twig' %}

@@ -1,0 +1,19 @@
+<?php
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ *
+ * This allows a proper inheritance of block templates because:
+ * "A sub-theme creates copies of all the blocks in the parent theme
+ * and renames them with the sub-theme's name as a prefix.
+ * Twig block templates are derived from the block's name,
+ * so this breaks the link between these templates and their block."
+ * See: https://www.drupal.org/docs/develop/theming-drupal/creating-sub-themes#s-inheriting-block-templates
+ */
+function ta_rayse_up_theme_suggestions_block_alter(&$suggestions, $variables) {
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('ta_rayse_up_', 'tara_', $suggestion);
+  }
+}
+
+?>
