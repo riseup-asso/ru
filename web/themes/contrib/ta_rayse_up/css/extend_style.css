@@ -750,6 +750,27 @@ nav.pager {
   color: rgba(0, 0, 0, 0.9);
 }
 
+.box-spectacle3 {
+  position: relative;
+  color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+  align: center;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0rem;
+  font-size: xx-large;
+  font: var(--font-heading);
+}
+
+..box-spectacle3 img {
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 /* Clearing
 -------------------------------------------- */
 
