@@ -1,0 +1,38 @@
+name: ta-rayse-up
+type: theme
+description: "This subtheme derives from Tara and implements customizations by Eileen, Elwynn, Lucie and Roma of Rise Up 4. Ce sous-thème dérive de Tara, et implémente des personnalisations d'Eileen, Elwynn, Lucie et Roma de Rise Up 4."
+core_version_requirement: ">=8"
+base theme: tara
+libraries:
+  - ta_rayse_up/alegreya
+  - ta_rayse_up/abrilfatface
+libraries-extend:
+  tara/global-styling:
+    - ta_rayse_up/extend_global_styling
+
+# Due to drupal, this is copied and pasted from Tara. If tara's regions and blocks were updated, this section should be updated too, from ../tara/tara.info.yml
+# Also, if regions do no longer match, it has the side effect of no longer inheriting block placements, too.
+# See: https://www.drupal.org/docs/develop/theming-drupal/creating-sub-themes#s-inheriting-block-placement
+regions:
+  header_top: 'Header Top'
+  site_branding: 'Site Branding'
+  primary_menu: 'Primary menu'
+  search_box: 'Full Page Search'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  content_top: 'Content Top'
+  content_bottom: 'Content Bottom'
+  content_home: 'Homepage Content'
+  sidebar_first: 'Sidebar Left'
+  sidebar_second: 'Sidebar Right'
+  footer_top: 'Footer Top'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_bottom: 'Footer Bottom'
+  hidden_blocks: 'Hidden Blocks'
+

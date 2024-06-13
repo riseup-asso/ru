@@ -1,0 +1,23 @@
+name: riseup
+
+services:
+
+  drupal:
+    image: drupal:10.2-php8.3
+    ports:
+     - "8000:80"
+    volumes:
+     - "./sites:/opt/drupal/web/sites"
+     - "./web/themes/contrib/tara:/var/www/html/themes/contrib/tara"
+     - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
+
+
+  db:
+    image: postgres:16
+    environment:
+      "POSTGRES_PASSWORD": "this docker compose file is not suitable for production"
+      "POSTGRES_USER": "drupal"
+      "POSTGRES_DB": "drupal"
+    volumes:
+      - "./postgresql:/var/lib/postgresql/data"
+

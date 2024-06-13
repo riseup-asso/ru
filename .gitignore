@@ -6,3 +6,10 @@ web/sites/*/files
 web/sites/*/private
 web/sites/default/files/
 *.sql
+
+# dev docker compose
+postgresql
+sites/default/files/php
+sites/default/files/css
+sites/default/files/js
+

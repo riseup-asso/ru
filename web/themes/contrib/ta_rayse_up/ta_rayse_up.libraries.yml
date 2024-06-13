@@ -1,0 +1,14 @@
+extend_global_styling:
+  css:
+    theme:
+      css/extend_style.css: {}
+alegreya:
+  version: 2011
+  css:
+    component:
+      css/alegreya.css: {}
+abrilfatface:
+  version: initial
+  css:
+    component:
+      css/abrilfatface.css: {}
