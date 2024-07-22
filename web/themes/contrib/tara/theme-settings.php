@@ -263,6 +263,18 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface $form_
      '#default_value' => theme_get_setting('telegram_url', 'tara'),
    ];
 
+   // Social -> mail.
+   $form['social']['email'] = [
+     '#type'        => 'details',
+     '#title'       => t("Mail"),
+   ];
+   $form['social']['email']['mail_url'] = [
+     '#type'          => 'textfield',
+     '#title'         => t('Mail'),
+     '#description'   => t("Enter yours email url. Leave the url field blank to hide this icon."),
+     '#default_value' => theme_get_setting('mail_url', 'tara'),
+   ];
+
   /**
    * Slider Settings
    */
