@@ -3,7 +3,9 @@ name: riseup
 services:
 
   drupal:
-    image: drupal:10.2-php8.3
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     ports:
      - "8000:80"
     volumes:
