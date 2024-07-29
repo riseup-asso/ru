@@ -6,6 +6,7 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends unzip; \
   apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
 	rm -rf /var/lib/apt/lists/*
+COPY php-conf.d/* /usr/local/etc/php/conf.d/
 COPY composer.json composer.lock /opt/drupal/
 RUN set -eux; \
 	export COMPOSER_HOME="$(mktemp -d)"; \
