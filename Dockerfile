@@ -1,12 +1,12 @@
 FROM drupal:10.2-php8.3
 RUN rm -Rf /opt/drupal && mkdir /opt/drupal
-COPY composer.json composer.lock /opt/drupal/
 WORKDIR /opt/drupal
 RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends unzip; \
   apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
 	rm -rf /var/lib/apt/lists/*
+COPY composer.json composer.lock /opt/drupal/
 RUN set -eux; \
 	export COMPOSER_HOME="$(mktemp -d)"; \
 	composer install --no-interaction; \
