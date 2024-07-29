@@ -18,7 +18,6 @@
         "composer/installers": "^2.0",
         "drupal/belgrade": "2.0",
         "drupal/coffee_zymphonies_theme": "1.0.1",
-        "drupal/colorbox": "^2.0",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
@@ -107,3 +106,4 @@
         }
     }
 }
+
