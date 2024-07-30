@@ -10,10 +10,10 @@
   --bg-body: #211A2E;
   --text-color: #fff;
   --link-color: #936856;
-  --link-color-hover: #fff;
+  --link-color-hover: #debca1;
   --bold-color: #fff;
   --light: #fff;
-  --font-text: 'Alegreya';
+  --font-text: "Alegreya";
   --font-heading: "Abril Fatface";
   /* new variables */
   --footer-color: #936856;
@@ -22,18 +22,15 @@
   --color-header: #211A2E;
   --color-header_top: #2f1844;
   --light-brown: #debca1;
-
 }
 
 
 /* I don't understand what this does,
  * but today is **not** gonna be the day that they're gonna throw it back to you //TODO */
-body,
 h1,
 h2,
 h3,
 h4,
-p,
 figure,
 blockquote,
 dl,
@@ -44,7 +41,7 @@ dd {
 /* HTML and Body
 ----------------------- */
 
-body {
+body,p {
   font-family: var(--font-text);
 }
 /* this used to be:
@@ -772,12 +769,12 @@ nav.pager {
   font: var(--font-heading);
 }
 
-..box-spectacle3 img {
+.box-spectacle3 img {
   object-fit: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
 }
 /* Clearing
 -------------------------------------------- */
