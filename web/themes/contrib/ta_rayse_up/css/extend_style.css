@@ -9,6 +9,8 @@
   --color-primary-light: #936856;
   --bg-body: #211A2E;
   --text-color: #fff;
+  --link-color: #936856;
+  --link-color-hover: #fff;
   --bold-color: #fff;
   --light: #fff;
   --font-text: 'Alegreya';
@@ -20,6 +22,7 @@
   --color-header: #211A2E;
   --color-header_top: #2f1844;
   --light-brown: #debca1;
+
 }
 
 
@@ -49,6 +52,13 @@ body {
 My guess is that it's a good idea to keep fallback defaults,
 but I don't have time to test and break this, I'm just an honest refactorer.
 */
+
+a{
+    color: var(--link-color);
+}
+a:hover{
+    color: var(--link-color-hover);
+}
 
 /* Typography -> Blockquote */
 blockquote:before {
@@ -749,7 +759,26 @@ nav.pager {
   background-color: var(--light-brown);
   color: rgba(0, 0, 0, 0.9);
 }
+.box-spectacle3 {
+  position: relative;
+  color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+  align: center;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0rem;
+  font-size: xx-large;
+  font: var(--font-heading);
+}
 
+..box-spectacle3 img {
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 /* Clearing
 -------------------------------------------- */
 
