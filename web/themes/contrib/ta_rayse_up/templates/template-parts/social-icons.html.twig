@@ -32,4 +32,11 @@
   {% if mail_url != '' %}
     <li><a href="mailto:{{ mail_url }}" target="_blank"><i class="icon-mail" aria-hidden="true"></i></a></li>
   {% endif %}
+  {% if tiktok_url != '' %}
+  <li>
+    <a href="{{ tiktok_url }}" target="_blank">
+      <i class="fa-brands--tiktok" aria-hidden="true"></i>
+    </a>
+  </li>
+  {% endif %}
 </ul>
