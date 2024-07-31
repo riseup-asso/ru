@@ -21,5 +21,15 @@ function ta_rayse_up_form_system_theme_settings_alter(&$form, FormStateInterface
      '#description'   => t("Enter your mail. Leave the mail field blank to hide this icon."),
      '#default_value' => theme_get_setting('mail_url', 'ta_rayse_up'),
    ];
+      $form['social']['tiktok'] = [
+     '#type'        => 'details',
+     '#title'       => t("TikTok"),
+   ];
+    $form['social']['tiktok']['tiktok_url'] = [
+     '#type'          => 'textfield',
+     '#title'         => t('TikTok'),
+     '#description'   => t("Enter your tiktok url. Leave the mail field blank to hide this icon."),
+     '#default_value' => theme_get_setting('tiktok_url', 'ta_rayse_up'),
+   ];
 
 }
