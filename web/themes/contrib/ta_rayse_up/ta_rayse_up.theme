@@ -18,7 +18,7 @@ function ta_rayse_up_theme_suggestions_block_alter(&$suggestions, $variables) {
 
 function ta_rayse_up_preprocess_page(array &$variables) {
 
-	$variables['mail_url'] = santise_val_url(theme_get_setting('mail_url', 'ta_rayse_up'));
+	$variables['mail_url'] = theme_get_setting('mail_url', 'ta_rayse_up');
  
 }
 
