@@ -1,4 +1,4 @@
-FROM drupal:10.2-php8.3
+FROM drupal:10.3-php8.3
 RUN rm -Rf /opt/drupal && mkdir /opt/drupal
 WORKDIR /opt/drupal
 RUN set -eux; \
