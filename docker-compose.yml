@@ -12,6 +12,7 @@ services:
      - "./sites:/opt/drupal/web/sites"
      - "./web/themes/contrib/tara:/var/www/html/themes/contrib/tara"
      - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
+    restart: unless-stopped
 
 
   db:
@@ -22,4 +23,4 @@ services:
       "POSTGRES_DB": "drupal"
     volumes:
       - "./postgresql:/var/lib/postgresql/data"
-
+    restart: unless-stopped
