@@ -1,0 +1,8 @@
+name: riseup
+
+services:
+
+  drupal:
+    volumes:
+     - ".dev-overrides/sites/default/services.yml:/opt/drupal/web/sites/default/services.yml"
+
