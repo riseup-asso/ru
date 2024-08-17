@@ -13,14 +13,16 @@ services:
      - "./web/themes/contrib/tara:/var/www/html/themes/contrib/tara"
      - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
     restart: unless-stopped
+    environment:
+      - POSTGRESS_PASSWORD=${POSTGRES_PASSWORD}
 
 
   db:
     image: postgres:16
     environment:
-      "POSTGRES_PASSWORD": "this docker compose file is not suitable for production"
-      "POSTGRES_USER": "drupal"
-      "POSTGRES_DB": "drupal"
+      - POSTGRES_USER="drupal"
+      - POSTGRES_DB="drupal"
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - "./postgresql:/var/lib/postgresql/data"
     restart: unless-stopped
