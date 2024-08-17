@@ -28,7 +28,7 @@ Dans `web/themes/contrib/ta-rayse_up`. Tout le reste ne sont que des libs ou des
 
 ## Prod
 
-Il faut absolument remplacer le fichier `settings.php` ainsi que `development.services.yml`.
+Pour l'endpoint oembed.riseup-asso.fr, il faut utiliser un reverse proxy pour supprimer l'en-tête HTTP `x-frame-options: SAMEORIGIN` et le remplacer par `Content-Security-Policy: frame-ancestors riseup-asso.fr` (ce qui permet à riseup-asso.fr de charger oembed.riseup-asso.fr). Ça ne pose pas de problème d'appliquer cette politique également à l'endpoint riseup-asso.fr (mais ça ne sert à rien).
 
 ## Base de données
 Lucie 20/02 : https://we.tl/t-heG9w1hHYX
