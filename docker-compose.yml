@@ -14,7 +14,7 @@ services:
      - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
     restart: unless-stopped
     environment:
-      - POSTGRESS_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - TRUSTED_HOST=${TRUSTED_HOST}
 
   db:
