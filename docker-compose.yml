@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
     environment:
       - POSTGRESS_PASSWORD=${POSTGRES_PASSWORD}
-
+      - TRUSTED_HOST=${TRUSTED_HOST}
 
   db:
     image: postgres:16
