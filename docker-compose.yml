@@ -9,6 +9,7 @@ services:
     ports:
      - "8000:80"
     volumes:
+     - files:"/opt/drupal/web/sites/default/files"
      - "./sites:/opt/drupal/web/sites"
      - "./web/themes/contrib/tara:/var/www/html/themes/contrib/tara"
      - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
@@ -16,6 +17,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - TRUSTED_HOST=${TRUSTED_HOST}
+      - OEMBED_TRUSTED_HOST=${OEMBED_TRUSTED_HOST}
 
   db:
     image: postgres:16
@@ -24,5 +26,9 @@ services:
       - POSTGRES_DB="drupal"
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
-      - "./postgresql:/var/lib/postgresql/data"
+      - postgresql:"/var/lib/postgresql/data"
     restart: unless-stopped
+
+  volumes:
+    files:
+    postgresql:
