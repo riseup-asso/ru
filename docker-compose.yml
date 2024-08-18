@@ -9,7 +9,7 @@ services:
     ports:
      - "8000:80"
     volumes:
-     - files:"/opt/drupal/web/sites/default/files"
+     - "files:/opt/drupal/web/sites/default/files"
      - "./sites:/opt/drupal/web/sites"
      - "./web/themes/contrib/tara:/var/www/html/themes/contrib/tara"
      - "./web/themes/contrib/ta_rayse_up:/var/www/html/themes/contrib/ta_rayse_up"
@@ -26,7 +26,7 @@ services:
       - POSTGRES_DB="drupal"
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
-      - postgresql:"/var/lib/postgresql/data"
+      - "postgresql:/var/lib/postgresql/data"
     restart: unless-stopped
 
 volumes:
