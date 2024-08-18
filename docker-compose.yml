@@ -21,7 +21,7 @@ services:
       - db
     labels:
       traefik.http.routers.riseup-drupal-drupal.entrypoints: websecure
-      traefik.http.routers.riseup-drupal-drupal.rule: Host(`preprod.riseup-asso.fr`) && !Path(`/2020`) && !Path(`/2021`) && !Path(`/2023`)
+      traefik.http.routers.riseup-drupal-drupal.rule: Host(`oembed.preprod.riseup-asso.fr`) || Host(`preprod.riseup-asso.fr`) && !Path(`/2020`) && !Path(`/2021`) && !Path(`/2023`)
       traefik.http.services.riseup-drupal-drupal.loadbalancer.server.port: 80
       traefik.enable: true
 
