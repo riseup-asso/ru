@@ -29,8 +29,7 @@ services:
       - postgresql:"/var/lib/postgresql/data"
     restart: unless-stopped
 
-  volumes:
-    files:
-
-    postgresql:
+volumes:
+  files:
+  postgresql:
 
