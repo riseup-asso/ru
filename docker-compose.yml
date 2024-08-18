@@ -23,6 +23,10 @@ services:
       traefik.http.routers.riseup-drupal-drupal.entrypoints: websecure
       traefik.http.routers.riseup-drupal-drupal.rule: "Host(`oembed.preprod.riseup-asso.fr`) || Host(`preprod.riseup-asso.fr`) && !Path(`/2020`) && !Path(`/2021`) && !Path(`/2023`)"
       traefik.http.services.riseup-drupal-drupal.loadbalancer.server.port: 80
+      traefik.http.middlewares.riseup-drupal-drupal-frame.headers.customFrameOptionsValue: "ALLOW-FROM https://preprod.riseup-asso.fr"
+      traefik.http.middlewares.riseup-drupal-drupal-add-csp.headers.contentSecurityPolicy: "frame-ancestors riseup-asso.fr preprod.riseup-asso.fr"
+      traefik.http.middlewares.riseup-drupal-drupal-buff.buffering.maxRequestBodyBytes: 2000000
+      traefik.http.routers.riseup-drupal-drupal.middlewares: "riseup-drupal-drupal-frame,riseup-drupal-drupal-add-csp"
       traefik.enable: true
 
 
