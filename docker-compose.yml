@@ -3,6 +3,7 @@ name: riseup-drupal
 services:
 
   drupal:
+    container_name: riseup-drupal-drupal
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -31,6 +32,7 @@ services:
 
 
   db:
+    container_name: riseup-drupal-db
     image: postgres:16
     environment:
       - POSTGRES_USER=drupal
